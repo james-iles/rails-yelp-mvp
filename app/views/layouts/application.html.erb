@@ -12,6 +12,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="d-flex justify-content-between align-items-center p-3 border-bottom">
+      <div class="fw-bold">
+        My App
+      </div>
+      <div>
+        <%= link_to "Restaurants", restaurants_path, class: "btn btn-outline-primary me-2" %>
+        <%= link_to "Add Restaurant", new_restaurant_path, class: "btn btn-primary" %>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
